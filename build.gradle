@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+    id 'groovy'
+}
+
+group 'com.vattenfall.kata'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven { url "http://oss.sonatype.org/content/repositories/snapshots/" }
+}
+
+dependencies {
+    compile group:  "log4j", name: 'log4j', version: '1.2.17'
+    compile group:  "org.codehaus.groovy", name: 'groovy-all', version: '2.4.15'
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.4.4'
+    testCompile group: 'org.spockframework', name: 'spock-core', version: '1.1-groovy-2.4'
+
+    testRuntime group: 'net.bytebuddy', name: 'byte-buddy', version: '1.6.5'
+
+}
