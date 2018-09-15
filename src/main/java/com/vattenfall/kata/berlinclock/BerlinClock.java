@@ -2,7 +2,7 @@ package com.vattenfall.kata.berlinclock;
 
 class BerlinClock {
 
-    String displyTime(String humanReadableTime) {
+    String displayTime(String humanReadableTime) {
         return "Y\n"
                 + "OOOO\n"
                 + "OOOO\n"

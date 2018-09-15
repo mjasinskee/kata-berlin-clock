@@ -10,7 +10,7 @@ class BerlinClockSpec extends Specification {
         def humanReadableTime = "00:00:00"
 
         when:
-        def berlinTime = clock.displyTime(humanReadableTime)
+        def berlinTime = clock.displayTime(humanReadableTime)
 
         then:
         berlinTime == "Y\n" +
