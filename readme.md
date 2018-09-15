@@ -31,3 +31,9 @@ Time is presented in 24H format in the way of turning on or off lights divided i
 Main goal of this kata is to have a lot of fun while development.
 
 Use TDD and play with Spock framework to implement Your tests. Remember that Java is object oriented language - use OOP (it's not Pascal).
+
+## Problem description ##
+
+General goal is to implement Berlin Clock to be able to consume input in 24H format (like HH:MM:SS) and produce display representation of the time.
+It is up to You how internal implementation will look like but You should stick to BerlinClockDisplay contract.
+You will find some tests already implemented in test/main/groovy showing You how to start and below You'll find full specification of tests that needs to be implemented.
