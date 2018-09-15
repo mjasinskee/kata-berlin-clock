@@ -37,3 +37,90 @@ Use TDD and play with Spock framework to implement Your tests. Remember that Jav
 General goal is to implement Berlin Clock to be able to consume input in 24H format (like HH:MM:SS) and produce display representation of the time.
 It is up to You how internal implementation will look like but You should stick to BerlinClockDisplay contract.
 You will find some tests already implemented in test/main/groovy showing You how to start and below You'll find full specification of tests that needs to be implemented.
+
+## Test cases ##
+
+In tests description lets assume we have:
+
+    “O” = Light off
+    “R” = Red light
+    “Y” = Yellow light
+
+- for input "00:00:00" we have:<br>
+    Y<br>
+    OOOO<br>
+    OOOO<br>
+    OOOOOOOOOOO<br>
+    OOOO<br>
+- for input "00:00:01" we have:<br>
+    O<br>
+    OOOO<br>
+    OOOO<br>
+    OOOOOOOOOOO<br>
+    OOOO<br>
+- for input "00:00:02" we have:<br>
+    Y<br>
+    OOOO<br>
+    OOOO<br>
+    OOOOOOOOOOO<br>
+    OOOO<br>
+- for input "00:01:00" we have:<br>
+    Y<br>
+    OOOO<br>
+    OOOO<br>
+    OOOOOOOOOOO<br>
+    YOOO<br>
+- for input "00:06:00" we have:<br>
+    Y<br>
+    OOOO<br>
+    OOOO<br>
+    YOOOOOOOOOO<br>
+    YOOO<br>
+- for input "00:37:00" we have:<br>
+    Y<br>
+    OOOO<br>
+    OOOO<br>
+    YYRYYRYOOOO<br>
+    YYOO<br>
+- for input "00:59:00" we have:<br>
+    Y<br>
+    OOOO<br>
+    OOOO<br>
+    YYRYYRYYRYY<br>
+    YYYY<br>
+- for input "01:00:00" we have:<br>
+    Y<br>
+    OOOO<br>
+    YOOO<br>
+    OOOOOOOOOOO<br>
+    OOOO<br>
+- for input "05:00:00" we have:<br>
+    Y<br>
+    YOOO<br>
+    OOOO<br>
+    OOOOOOOOOOO<br>
+    OOOO<br>
+- for input "07:00:00" we have:<br>
+    Y<br>
+    YOOO<br>
+    YYOO<br>
+    OOOOOOOOOOO<br>
+    OOOO<br>
+- for input "15:00:00" we have:<br>
+    Y<br>
+    YYYO<br>
+    OOOO<br>
+    OOOOOOOOOOO<br>
+    OOOO<br>
+- for input "24:00:00" we have:<br>
+    Y<br>
+    YYYY<br>
+    YYYY<br>
+    OOOOOOOOOOO<br>
+    OOOO<br>
+- for input "12:56:01" we have:<br>
+    O<br>
+    RROO<br>
+    RROO<br>
+    YYRYYRYYRYY<br>
+    YOOO<br>
