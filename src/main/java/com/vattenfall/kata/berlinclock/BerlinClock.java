@@ -1,12 +1,12 @@
 package com.vattenfall.kata.berlinclock;
 
-class BerlinClock {
+import com.vattenfall.kata.berlinclock.display.BerlinClockDisplay;
+
+public class BerlinClock {
+
+    private BerlinClockDisplay display = new BerlinClockDisplay();
 
     String displayTime(String humanReadableTime) {
-        return "Y\n"
-                + "OOOO\n"
-                + "OOOO\n"
-                + "OOOOOOOOOOO\n"
-                + "OOOO";
+        return display.berlinTime(humanReadableTime);
     }
 }

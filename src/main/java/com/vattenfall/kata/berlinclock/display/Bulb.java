@@ -1,4 +1,4 @@
-package com.vattenfall.kata.berlinclock;
+package com.vattenfall.kata.berlinclock.display;
 
 class Bulb {
 
