@@ -23,8 +23,12 @@ public class SegmentForSingleMinutes extends Segment {
         bulbs.stream()
              .filter(bulb -> bulbs.indexOf(bulb) < result)
              .forEach(Bulb::switchOn);
-        bulbs.forEach(bulb -> builder.append(bulb.currentColor().getColourCode()));
+        bulbs.forEach(bulb -> builder.append(bulbColorCode(bulb)));
         return builder.toString();
+    }
+
+    private String bulbColorCode(Bulb bulb) {
+        return bulb.currentColor().getColourCode();
     }
 
 }
